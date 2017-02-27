@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>demo04</title>
+	<script type="text/javascript" src="../build/react.js"></script>
+	<script type="text/javascript" src="../build/react-dom.js"></script>
+	<script type="text/javascript" src="../build/browser.min.js"></script>
+</head>
+<body>
+<div id="demo04"></div>
+<script type="text/babel">
+	var HtmlMessage = React.createClass({
+		render: function(){
+			return <h1>hello,{this.props.name}</h1>;
+		}
+	});
+
+	ReactDOM.render(
+		<HtmlMessage name="hyj"/>,
+		document.getElementById('demo04')
+	);
+</script>
+
+</body>
+</html>
