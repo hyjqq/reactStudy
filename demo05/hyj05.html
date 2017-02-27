@@ -8,7 +8,7 @@
 </head>
 <body>
 <div id="example"></div>
-<script type="text/bable">
+<script type="text/babel">
 	var NodesList = React.createClass({
 		render: function(){
 			return (
@@ -16,19 +16,19 @@
 				{
 					React.Children.map(this.props.children,function(child){
 						return <li>{child}</li>;
-					});
+					})
 				}	
 				</ol>
 			);
 		}
 	});
 	ReactDOM.render(
-		<NodesList>
-			<span>aaa</span>
-			<span>bbb</span>
-		</NodesList>,
-		document.getElementById('example')
-	)
+        <NotesList>
+          <span>hello</span>
+          <span>world</span>
+        </NotesList>,
+        document.getElementById('example')
+      );
 </script>
 </body>
 </html>
