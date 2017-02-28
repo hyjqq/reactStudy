@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="../build/react.js"></script>
+    <script src="../build/react-dom.js"></script>
+    <script src="../build/browser.min.js"></script>
+    <style type="text/css">
+      p{
+        width:120px;
+        height:50px;
+        line-height: 50px;
+        text-align: center;
+        border-radius: 7px;
+        background-color: #ccc;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="example"></div>
+    <script type="text/babel">
+      var MyState = React.createClass({
+        getInitialState:function(){
+          return {liked:false};
+        },
+        handleClick: function(event){
+          this.setState({liked:!this.state.liked});
+        },
+        render:function(){
+          var text=this.state.liked?'true':'false';
+          return (
+            <p onClick={this.handleClick}>{text}</p>
+          );
+        }
+      });
+      ReactDOM.render(
+        <MyState />,
+        document.getElementById('example')
+      )
+    </script>
+  </body>
+</html>
+
